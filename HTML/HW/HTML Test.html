@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>HTML Test</title>
+
+	</head>
+
+
+	<body>
+
+		<script>
+			/*
+			//document.write("<font color='red' size='5'>Welcome to PHP</font>");
+			var x = parseFloat(window.prompt("Enter the value of X: "));
+			var y = parseFloat(window.prompt("Enter the value of Y: ", 0));
+
+			var z = x + y;
+
+			document.write("<font color='orange' size='5'>The result is: "+z+"</font>");
+
+			var mark = parseFloat(window.prompt("Enter your mark: "));
+			if (mark >= 50){
+				document.write("<font color='green' size='5'>PASS</font>");
+			}
+			else{
+				document.write("<font color='red' size='5'>FAIL</font>");
+
+			}
+			*/
+			var z, sum = 0;
+			document.write("<table border='1' size='25%'>");
+			document.write("<tr><td> NUMBERS </tr></td>");
+			for (i = 0; i < 10; i++) {
+				z = Math.floor((Math.random() * 10) + 1);
+				document.write("<tr><td>" + z + "</tr></td>");
+				sum += z;
+			}
+			document.write("<tr><td>Sum = " + sum + "</tr></td>");
+			document.write("</table>");
+
+		</script>
+	
+
+	</body>
+
+
+
+
+
+
+
+</html>

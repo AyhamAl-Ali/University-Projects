@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lab 4 Part 2 - Ayham</title>
+</head>
+
+<body>
+	<form method="get">
+		<fieldset>
+			<legend>Personal Details</legend>
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<datalist id="nationality">
+						<option value="Jordanian">
+						<option value="Palestinian">
+						<option value="Syrian">
+						<option value="Iraqi">
+					</datalist>
+					<td>Nationality:</td>
+					<td><input list="nationality" name="nationality"></td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td>
+					<input type="radio" name="gender" value="female" id="female">
+					<label for="female">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+					<input type="radio" name="gender" value="male" id="male">
+					<label for="male">Male</label>
+					</td>
+				</tr>
+
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Education</legend>
+			<table>
+				<tr>
+					<td>Education:</td>
+					<td>
+					<select id="education">
+						<option value="Phd">Phd
+						<option value="Master">Master
+						<option value="Bsc">Bsc
+						<option value="Bs">Bs
+					</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>University:</td>
+					<datalist id="uni">
+						<option value="University of Jordan">
+						<option value="University of Petra">
+						<option value="Jordan University of Sciences and Technology">
+					</datalist>
+					<td>
+						<input list="uni" name="uni">
+					</td>
+				</tr>
+				<tr>
+					<td>Experience</td>
+					<td>
+						<input type="number" min="2">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<input type="submit" value="ok">
+		<input type="reset" value="clear">
+	</form>
+
+	<p align="center">Made with ❤ By Ayham Al-Ali</p>
+</body>
+</html>

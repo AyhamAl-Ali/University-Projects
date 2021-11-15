@@ -1,0 +1,11 @@
+
+Please note..
+
+- To run this project you will need a web-server or a localhost to make Javascript codes work,
+- You can either run it using php localhost using 'php -S localhost:8000' (terminal command) OR using XAMPP.
+
+* Running these html files without a server will not make the header nor the footer run.
+
+* OR use this live example (hope it still works in the future ;) ): https://opg4mers.com/iot
+
+* This project has been developed my Ayham A-Ali (201910486)

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Internet of Things | Frameworks</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/cloud-storage.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/menu2.css">
+    <link rel="stylesheet" type="text/css" href="css/btt.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"> <!-- Google Font API -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style> 
+      .about span { 
+        max-width: 35%;
+        margin-left: 15%;
+        text-align: left;
+        font-family: 'Ubuntu Medium';
+      }
+      .about img { 
+        margin-right: 12%;
+        float: right;
+      }
+      .iot-about-button:hover {
+        background-color: rgb(65, 137, 231);
+      }
+      .iot-about-button {
+        font-family: 'Ubuntu Light';
+        margin-left: 15%;
+        text-align: left;
+        color: white;
+        background-color: rgb(45, 118, 212);
+        padding: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease 0s;
+      }
+      #about-more {
+        width: 60%;
+        padding: 100px 20% 0px 20%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="topFunction()" id="backToTopButton" title="Go to top">Top</button>
+      <script src="js/backToTop.js"></script>
+
+      <div id="header"></div>
+
+      <div class="empty-sapce"></div>
+
+      <div class="about">
+        <!-- <p>Internet of Things (IoT) refers to a system of connected physical objects via the internet. The ‘thing’ in IoT can refer to a person or any device which is assigned through an IP address. A ‘thing’ collects and transfers data over the internet without any manual intervention with the help of embedded technology. It helps them to interact with the external environment or internal states to take the decisions.</p> -->
+        <img src="images/3/Asset 1.png" width="700" height="500">
+        <span style="font-size: 80px; padding-top: 90px; display: block;">IoT Frameworks</span>
+        <span style="font-size: 20px; font-family: 'Ubuntu Light'; display: block; max-width: 450px;">
+          There are several IoT frameworks, here are some of them below..
+        </span>
+        <div style="height: 50px"></div>
+        <a class="iot-about-button" style="font-size: 25px;" href="#about">Read More!</a>
+      </div>
+
+      <div class="empty-sapce"></div>
+      <a id="about"></a>
+      
+      <div id="about-more">
+        <p style="font-size: 40px; font-weight: bold;">IoT Frameworks</p>
+        <br>
+        <p style="font-size: 24px;">
+          IoT frameworks include the following:
+          <br><br>
+          <ul style="font-size: 20px;">
+            <li>Amazon Web Services (AWS) IoT is a cloud computing platform for IoT released by Amazon. This framework is designed to enable smart devices to easily connect and securely interact with the AWS cloud and other connected devices.</li>
+            <br>
+            <li>Arm Mbed IoT is a platform to develop apps for IoT based on Arm microcontrollers. The goal of the Arm Mbed IoT platform is to provide a scalable, connected and secure environment for IoT devices by integrating Mbed tools and services.</li>
+            <br>
+            <li>Microsoft's Azure IoT Suite is a platform that consists of a set of services that enables users to interact with and receive data from their IoT devices, as well as perform various operations over data, such as multidimensional analysis, transformation and aggregation, and visualize those operations in a way that's suitable for business.</li>
+            <br>
+            <li>Google's Brillo/Weave is a platform for the rapid implementation of IoT applications. The platform consists of two main backbones: Brillo, an Android-based OS for the development of embedded low-power devices, and Weave, an IoT-oriented communication protocol that serves as the communication language between the device and the cloud.</li>
+            <br>
+            <li>Calvin is an open source IoT platform released by Ericsson designed for building and managing distributed applications that enable devices to talk to each other. Calvin includes a development framework for application developers, as well as a runtime environment for handling the running application.</li>
+          </ul>
+            
+        </p>
+      </div>
+
+
+
+      <div class="empty-sapce"></div>
+      <span id="nextbtn"><a href="usage.html">Next Page &#187;</a></span>
+      <div class="empty-sapce"></div>
+
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

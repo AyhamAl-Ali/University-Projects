@@ -1,0 +1,20 @@
+/* CSS Menu */
+.menu nav {
+	overflow: hidden;
+	background-color: rgb(61, 61, 61);
+	font-size: 0px; /* Remove white spaces between the items */
+}
+.menu a {
+	font-size: 16px; /* Override font-size of nav to remove the white spaces between the items*/
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+}
+.menu a:hover:not(.active) {
+	background-color: rgb(49, 49, 49);
+}
+.active {
+	background-color: rgb(45, 105, 216);
+}

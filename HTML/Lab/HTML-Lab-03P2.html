@@ -1,0 +1,72 @@
+<!--  
+
+	HTML Lab 3 - Part 2
+
+	Made with ❤ By Ayham Al-Ali
+	ID: 201910486
+	Date: 4/3/2020 (MM/DD/YY)
+
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HTML Lab 3 - Part 2 - Ayham</title>
+</head>
+<body>
+
+	<p>Please fill this form to help us in understanding you needs.</p>
+	<strong><p>Some notes:</p></strong>
+	<ul>
+		<li>Write your name in English as in the passport</li>
+		<li>Use brief statements to describe yourself</li>
+	</ul>
+
+	<form>
+		<label>First Name: <input type="text" name="fname" required></label>
+		<label> &nbsp;Surname: <input type="text" name="sname" required></label>
+
+		<br>
+
+		<label>English Level: </label>
+			<label><input type="radio" name="elevel" value="beginner" id="elevel" required checked> Beginner</label>
+			<label><input type="radio" name="elevel" value="intermediate" id="elevel"> Intermediate</label>
+			<label><input type="radio" name="elevel" value="fluent" id="elevel"> Fluent</label>
+		</label>
+
+		<br>
+
+		<label>
+			Mobile: +962 - 
+			<select id="numcompany" name="numcompany">
+				<option value="79">79</option>
+				<option value="78">78</option>
+				<option value="77">77</option>
+			</select>
+			- <input type="tel" name="number" required>
+
+		</label>
+
+		<br>
+
+		<label>
+			Describe yourself:
+			<br>
+			<textarea name="selfdescribtion" rows="10" cols="55" required></textarea>
+		</label>
+
+		<br>
+
+		<label>
+			<input type="checkbox" name="notrobot" required> I'm not a Robot
+		</label>
+
+		<br>
+		<label><input type="submit" name="submit" value="Let's start the fun"></label>
+		<label><input type="reset" name="reset" value="Fill again"></label>
+
+	</form>
+
+	<p align="center"> Made With ❤ By Ayham Al-Ali</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+* {
+	font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin: 0;
+	}
+	
+	html {
+	scroll-behavior: smooth;
+	}
+	
+	.empty-sapce {
+	height: 200px;
+	visibility: hidden;
+	}
+	
+	body {
+		overflow-x: hidden;
+	}
+	
+	#nextbtn a:hover {
+	background-color: rgb(65, 137, 231);
+	}
+	#nextbtn a {
+		font-family: 'Ubuntu Light';
+		text-align: center;
+		color: white;
+		background-color: rgb(45, 118, 212);
+		padding: 10px;
+		font-size: 20px;
+		border-radius: 50px;
+		text-decoration: none;
+		transition: background-color 0.2s ease 0s;
+	}
+	
+	#nextbtn {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	}
+	
+	.contactus input {
+		width: 300px;
+		font-size: 15px;
+		height: 30px;
+	}
+	.contactus textarea {
+		width: 300px;
+		font-size: 15px;
+	}
+	.contactus table td, .contactus label {
+		font-size: 15px;
+		color: black;
+		width: 150px;
+		padding: 5px;
+	
+	}
+	.contactus input[type="submit"] {
+		font-size: 15px;
+		color: white;
+		width: 150px;
+		height: 30px;
+		background-color: #2D76D4;
+		border: 0px;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: background-color 0.2s ease 0s;
+	
+	}
+	.contactus input[type="submit"]:hover {
+		background-color: rgb(71, 144, 240);
+	
+	}

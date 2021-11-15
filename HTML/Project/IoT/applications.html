@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Internet of Things | Applications</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/cloud-storage.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/menu2.css">
+    <link rel="stylesheet" type="text/css" href="css/btt.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"> <!-- Google Font API -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style> 
+      .about span { 
+        max-width: 35%;
+        margin-left: 15%;
+        text-align: left;
+        font-family: 'Ubuntu Medium';
+      }
+      .about img { 
+        margin-right: 12%;
+        float: right;
+      }
+      .iot-about-button:hover {
+        background-color: rgb(65, 137, 231);
+      }
+      .iot-about-button {
+        font-family: 'Ubuntu Light';
+        margin-left: 15%;
+        text-align: left;
+        color: white;
+        background-color: rgb(45, 118, 212);
+        padding: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease 0s;
+      }
+      #about-more {
+        width: 60%;
+        padding: 100px 20% 0px 20%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="topFunction()" id="backToTopButton" title="Go to top">Top</button>
+      <script src="js/backToTop.js"></script>
+
+      <div id="header"></div>
+
+      <div class="empty-sapce"></div>
+
+      <div class="about">
+        <!-- <p>Internet of Things (IoT) refers to a system of connected physical objects via the internet. The ‘thing’ in IoT can refer to a person or any device which is assigned through an IP address. A ‘thing’ collects and transfers data over the internet without any manual intervention with the help of embedded technology. It helps them to interact with the external environment or internal states to take the decisions.</p> -->
+        <img src="images/3/Asset 1.png" width="700" height="500">
+        <span style="font-size: 80px; padding-top: 90px; display: block;">IoT Applications</span>
+        <span style="font-size: 20px; font-family: 'Ubuntu Light'; display: block; max-width: 450px;">
+          There are numerous real-world applications of the internet of things, ranging from consumer IoT and enterprise IoT to manufacturing and industrial IoT (IIoT). IoT applications span numerous verticals, including automotive, telecom and energy.
+        </span>
+        <div style="height: 50px"></div>
+        <a class="iot-about-button" style="font-size: 25px;" href="#about">Read More!</a>
+      </div>
+
+      <div class="empty-sapce"></div>
+      <a id="about"></a>
+      
+      <div id="about-more">
+        <p style="font-size: 40px; font-weight: bold;">Consumer and enterprise IoT applications</p>
+        <br>
+        <p style="font-size: 24px;">
+          In the consumer segment, for example, smart homes that are equipped with smart thermostats, smart appliances and connected heating, lighting and electronic devices can be controlled remotely via computers and smartphones.
+          <br><br>
+          Wearable devices with sensors and software can collect and analyze user data, sending messages to other technologies about the users with the aim of making users' lives easier and more comfortable. Wearable devices are also used for public safety -- for example, improving first responders' response times during emergencies by providing optimized routes to a location or by tracking construction workers' or firefighters' vital signs at life-threatening sites.
+          <br><br>
+          In healthcare, IoT offers many benefits, including the ability to monitor patients more closely using an analysis of the data that's generated. Hospitals often use IoT systems to complete tasks such as inventory management for both pharmaceuticals and medical instruments.
+          <br><br>
+          Smart buildings can, for instance, reduce energy costs using sensors that detect how many occupants are in a room. The temperature can adjust automatically -- for example, turning the air conditioner on if sensors detect a conference room is full or turning the heat down if everyone in the office has gone home.
+          <br><br>
+          In agriculture, IoT-based smart farming systems can help monitor, for instance, light, temperature, humidity and soil moisture of crop fields using connected sensors. IoT is also instrumental in automating irrigation systems.
+          <br><br>
+          In a smart city, IoT sensors and deployments, such as smart streetlights and smart meters, can help alleviate traffic, conserve energy, monitor and address environmental concerns, and improve sanitation.
+
+        </p>
+      </div>
+
+
+
+      <div class="empty-sapce"></div>
+      <span id="nextbtn"><a href="examples.html">Next Page &#187;</a></span>
+      <div class="empty-sapce"></div>
+
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

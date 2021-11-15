@@ -1,0 +1,63 @@
+
+.footer {
+position: relative;
+bottom: 0px;
+height: 300px;
+width: 100%;
+background-color: rgb(27, 27, 27);
+color: white;
+display: block;
+overflow: hidden;
+}
+.footer p {
+font-size: 12px;
+}
+.footer #map {
+float: left;
+width: 400px;
+position: relative;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 25%;
+margin-right: 40px;
+}/*
+.footer iframe {
+position: absolute;
+transform: translate(-50%, -50%);
+top: 75%;
+left: 50%;
+}*/
+.footer p a:hover {
+color: #39A1FF;
+transition: color 0.3s ease 0s;
+}
+.footer p a {
+color: rgb(221, 221, 221);
+transition: color 0.3s ease 0s;
+text-decoration: none;
+}
+.footer #text {
+float: left;
+position: relative;
+width: 400px;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 25%;
+margin-right: 40px;
+}
+.footer #button:hover {
+background-color: rgb(65, 137, 231);
+}
+
+.footer #button {
+position: relative;
+display: inline-block;
+font-family: 'Ubuntu Light';
+color: white;
+font-size: 12px;
+background-color: rgb(45, 118, 212);
+padding: 8px;
+border-radius: 20px;
+text-decoration: none;
+transition: background-color 0.2s ease 0s;
+}

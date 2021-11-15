@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Internet of Things | Standards</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/cloud-storage.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/menu2.css">
+    <link rel="stylesheet" type="text/css" href="css/btt.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"> <!-- Google Font API -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style> 
+      .about span { 
+        max-width: 35%;
+        margin-left: 15%;
+        text-align: left;
+        font-family: 'Ubuntu Medium';
+      }
+      .about img { 
+        margin-right: 12%;
+        float: right;
+      }
+      .iot-about-button:hover {
+        background-color: rgb(65, 137, 231);
+      }
+      .iot-about-button {
+        font-family: 'Ubuntu Light';
+        margin-left: 15%;
+        text-align: left;
+        color: white;
+        background-color: rgb(45, 118, 212);
+        padding: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease 0s;
+      }
+      #about-more {
+        width: 60%;
+        padding: 100px 20% 0px 20%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="topFunction()" id="backToTopButton" title="Go to top">Top</button>
+      <script src="js/backToTop.js"></script>
+
+      <div id="header"></div>
+
+      <div class="empty-sapce"></div>
+
+      <div class="about">
+        <!-- <p>Internet of Things (IoT) refers to a system of connected physical objects via the internet. The ‘thing’ in IoT can refer to a person or any device which is assigned through an IP address. A ‘thing’ collects and transfers data over the internet without any manual intervention with the help of embedded technology. It helps them to interact with the external environment or internal states to take the decisions.</p> -->
+        <img src="images/3/Asset 1.png" width="700" height="500">
+        <span style="font-size: 80px; padding-top: 90px; display: block;">IoT Standards</span>
+        <span style="font-size: 20px; font-family: 'Ubuntu Light'; display: block; max-width: 450px;">
+          There are several emerging IoT standards, here are some of them below..
+        </span>
+        <div style="height: 50px"></div>
+        <a class="iot-about-button" style="font-size: 25px;" href="#about">Read More!</a>
+      </div>
+
+      <div class="empty-sapce"></div>
+      <a id="about"></a>
+      
+      <div id="about-more">
+        <p style="font-size: 40px; font-weight: bold;">IoT Standards</p>
+        <br>
+        <p style="font-size: 24px;">
+          There are several emerging IoT standards, including the following:
+
+          <ul style="font-size: 20px;">
+            <br><br>
+            <li>IPv6 over Low-Power Wireless Personal Area Networks (6LoWPAN) is an open standard defined by the Internet Engineering Task Force (IETF). The 6LoWPAN standard enables any low-power radio to communicate to the internet, including 804.15.4, Bluetooth Low Energy (BLE) and Z-Wave (for home automation).</li>
+            <br>
+            <li>ZigBee is a low-power, low-data rate wireless network used mainly in industrial settings. ZigBee is based on the Institute of Electrical and Electronics Engineers (IEEE) 802.15.4 standard. The ZigBee Alliance created Dotdot, the universal language for IoT that enables smart objects to work securely on any network and understand each other.</li>
+            <br>
+            <li>LiteOS is a Unix-like operating system (OS) for wireless sensor networks. LiteOS supports smartphones, wearables, intelligent manufacturing applications, smart homes and the internet of vehicles (IoV). The OS also serves as a smart device development platform.</li>
+            <br>
+            <li>OneM2M is a machine-to-machine service layer that can be embedded in software and hardware to connect devices. The global standardization body, OneM2M, was created to develop reusable standards to enable IoT applications across different verticals to communicate.</li>
+            <br>
+            <li>Data Distribution Service (DDS) was developed by the Object Management Group (OMG) and is an IoT standard for real-time, scalable and high-performance M2M communication.</li>
+            <br>
+            <li>Advanced Message Queuing Protocol (AMQP) is an open source published standard for asynchronous messaging by wire. AMQP enables encrypted and interoperable messaging between organizations and applications. The protocol is used in client-server messaging and in IoT device management.</li>
+            <br>
+            <li>Constrained Application Protocol (CoAP) is a protocol designed by the IETF that specifies how low-power, compute-constrained devices can operate in the internet of things.</li>
+            <br>
+            <li>Long Range Wide Area Network (LoRaWAN) is a protocol for WANs designed to support huge networks, such as smart cities, with millions of low-power devices.</li>
+          </ul>
+            
+        </p>
+      </div>
+
+
+
+      <div class="empty-sapce"></div>
+      <span id="nextbtn"><a href="frameworks.html">Next Page &#187;</a></span>
+      <div class="empty-sapce"></div>
+
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

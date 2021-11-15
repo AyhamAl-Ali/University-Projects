@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Internet of Things | Usage</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/cloud-storage.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/menu2.css">
+    <link rel="stylesheet" type="text/css" href="css/btt.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"> <!-- Google Font API -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style> 
+      .about span { 
+        max-width: 35%;
+        margin-left: 15%;
+        text-align: left;
+        font-family: 'Ubuntu Medium';
+      }
+      .about img { 
+        margin-right: 12%;
+        float: right;
+      }
+      .iot-about-button:hover {
+        background-color: rgb(65, 137, 231);
+      }
+      .iot-about-button {
+        font-family: 'Ubuntu Light';
+        margin-left: 15%;
+        text-align: left;
+        color: white;
+        background-color: rgb(45, 118, 212);
+        padding: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease 0s;
+      }
+      #about-more {
+        width: 60%;
+        padding: 100px 20% 0px 20%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="topFunction()" id="backToTopButton" title="Go to top">Top</button>
+      <script src="js/backToTop.js"></script>
+
+      <div id="header"></div>
+
+      <div class="empty-sapce"></div>
+
+      <div class="about">
+        <!-- <p>Internet of Things (IoT) refers to a system of connected physical objects via the internet. The ‘thing’ in IoT can refer to a person or any device which is assigned through an IP address. A ‘thing’ collects and transfers data over the internet without any manual intervention with the help of embedded technology. It helps them to interact with the external environment or internal states to take the decisions.</p> -->
+        <img src="images/3/Asset 1.png" width="700" height="500">
+        <span style="font-size: 80px; padding-top: 90px; display: block;">IoT Usage</span>
+        <span style="font-size: 20px; font-family: 'Ubuntu Light'; display: block; max-width: 450px;">
+			There are billions of devices in homes, factories, oil wells, hospitals, cars, and thousands of other places. With the proliferation of devices, you increasingly need solutions to connect them, and collect, store, and analyze device data.
+        </span>
+        <div style="height: 50px"></div>
+        <a class="iot-about-button" style="font-size: 25px;" href="#about">Read More!</a>
+      </div>
+
+      <div class="empty-sapce"></div>
+      <a id="about"></a>
+      
+      <div id="about-more">
+        <p style="font-size: 40px; font-weight: bold;">Industrial</p>
+        <br>
+        <p style="font-size: 24px;">
+			AWS IoT customers are building industrial IoT applications for predictive quality and maintenance and to remotely monitor operations.
+        </p>
+    </div>
+    
+    <div id="about-more">
+      <p style="font-size: 40px; font-weight: bold;">Connected home
+	</p>
+      <br>
+      <p style="font-size: 24px;">
+        AWS IoT customers are building connected home applications for home automation, home security and monitoring, and home networking.
+      </p>
+  </div>
+    
+  <div id="about-more">
+    <p style="font-size: 40px; font-weight: bold;">Commercial</p>
+    <br>
+    <p style="font-size: 24px;">
+		AWS IoT customers are building commercial applications for traffic monitoring, public safety, and health monitoring.
+    </p>
+  </div>
+
+
+      <div class="empty-sapce"></div>
+      <span id="nextbtn"><a href="applications.html">Next Page &#187;</a></span>
+      <div class="empty-sapce"></div>
+
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Internet of Things | About</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/cloud-storage.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/menu2.css">
+    <link rel="stylesheet" type="text/css" href="css/btt.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> <!-- Google Font API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"> <!-- Google Font API -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style> 
+      .about span { 
+        max-width: 35%;
+        margin-left: 15%;
+        text-align: left;
+        font-family: 'Ubuntu Medium';
+      }
+      .about img { 
+        margin-right: 12%;
+        float: right;
+      }
+      .iot-about-button:hover {
+        background-color: rgb(65, 137, 231);
+      }
+      .iot-about-button {
+        font-family: 'Ubuntu Light';
+        margin-left: 15%;
+        text-align: left;
+        color: white;
+        background-color: rgb(45, 118, 212);
+        padding: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease 0s;
+      }
+      #about-more {
+        width: 60%;
+        padding: 100px 20% 0px 20%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="topFunction()" id="backToTopButton" title="Go to top">Top</button>
+      <script src="js/backToTop.js"></script>
+
+      <div id="header"></div>
+
+      <div class="empty-sapce"></div>
+
+      <div class="about">
+        <!-- <p>Internet of Things (IoT) refers to a system of connected physical objects via the internet. The ‘thing’ in IoT can refer to a person or any device which is assigned through an IP address. A ‘thing’ collects and transfers data over the internet without any manual intervention with the help of embedded technology. It helps them to interact with the external environment or internal states to take the decisions.</p> -->
+        <img src="images/3/Asset 1.png" width="700" height="500">
+        <span style="font-size: 80px; padding-top: 90px; display: block;">IoT Definitions</span>
+        <span style="font-size: 20px; font-family: 'Ubuntu Light'; display: block; max-width: 450px;">
+          The term Internet of Things generally refers to scenarios where network connectivity and computing capability extends to objects, sensors and everyday items not normally considered computers, allowing these devices to generate, exchange and consume data with minimal human intervention. There is, however, no single, universal definition.
+        </span>
+        <div style="height: 50px"></div>
+        <a class="iot-about-button" style="font-size: 25px;" href="#about">Read More!</a>
+      </div>
+
+      <div class="empty-sapce"></div>
+      <a id="about"></a>
+      
+      <div id="about-more">
+        <p style="font-size: 40px; font-weight: bold;">Enabling Technologies</p>
+        <br>
+        <p style="font-size: 24px;">
+          The concept of combining computers, sensors, and networks to monitor and control devices has existed for decades. The recent confluence of several technology market trends, however, is bringing the Internet of Things closer to widespread reality. These include Ubiquitous Connectivity, Widespread Adoption of IP-based Networking, Computing Economics, Miniaturization, Advances in Data Analytics, and the Rise of Cloud Computing.
+        </p>
+    </div>
+    
+    <div id="about-more">
+      <p style="font-size: 40px; font-weight: bold;">Connectivity Models</p>
+      <br>
+      <p style="font-size: 24px;">
+        IoT implementations use different technical communications models, each with its own characteristics. Four common communications models described by the Internet Architecture Board include: Device-to-Device, Device-to-Cloud, Device-to-Gateway, and Back-End Data-Sharing. These models highlight the flexibility in the ways that IoT devices can connect and provide value to the user.
+      </p>
+  </div>
+    
+  <div id="about-more">
+    <p style="font-size: 40px; font-weight: bold;">Transformational Potential</p>
+    <br>
+    <p style="font-size: 24px;">
+      If the projections and trends towards IoT become reality, it may force a shift in thinking about the implications and issues in a world where the most common interaction with the Internet comes from passive engagement with connected objects rather than active engagement with content. The potential realization of this outcome – a “hyperconnected world” — is testament to the general-purpose nature of the Internet architecture itself, which does not place inherent limitations on the applications or services that can make use of the technology.
+    </p>
+  </div>
+
+
+      <div class="empty-sapce"></div>
+      <span id="nextbtn"><a href="history.html">Next Page &#187;</a></span>
+      <div class="empty-sapce"></div>
+
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
