@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ayham - PHP 04</title>
+    <style>
+      body {
+        font-family: 'Poppins';
+        /* background-color: #000; */
+      }
+      * {
+        margin: 3px 0;
+      }
+      #main {
+        margin: 5% auto;
+        width: max-content;
+      }
+      #buttons-div {
+        margin: 0 auto;
+        width: max-content;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, .3);
+      }
+
+    .border {
+        border: 1px solid green;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .button {
+        border: unset;
+        padding: 10px;
+        cursor: pointer;
+        transition: all .1s;
+        margin-right: 10px;
+    }
+
+    .button:hover, img:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        transition: all .1s;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    #students {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+    .no-margin {
+      margin: unset;
+    }
+    .center {
+      margin: 0 auto;
+      width: max-content;
+    }
+    .text {
+      border: 1px solid rgba(0, 0, 0, .5);
+      padding: 10px;
+      text-align: center;
+      width: max-content;
+      float: right;
+      margin: 5px;
+    }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+    <script>
+      $(document).ready(() => {
+        var table = $("#students");
+        var avgEl = $("#avg");
+        var maxEl = $("#max");
+
+        var counter = 0;
+        var allTotal = 0;
+        var avg = 0;
+        var max = 0;
+
+        $("#submit").click(() => {
+          let number = $("#s-number").val();
+          let name = $("#s-name").val();
+          let first = parseFloat($("#s-first").val());
+          let second = parseFloat($("#s-second").val());
+          let final = parseFloat($("#s-final").val());
+          let total = first + second + final;
+
+          if (name == "" || number == "") {
+            alert(`Name and Number fields are required.`);
+            return;
+          }
+
+          if (first > 25 || second > 25 || final > 50 || first < 0 || second < 0 || final < 0 || Number.isNaN(first) || Number.isNaN(second) || Number.isNaN(final)) {
+            alert(`First and second must be between 0 and 25\nFinal must be between 0 and 50\n\nFirst: ${first}\nSecond: ${second}\nFinal: ${final}`);
+            return;
+          }
+
+          let pass = false;
+          if (total > 50)
+            pass = true;
+
+          counter++; // 1 more student
+          allTotal += total;
+          avg = allTotal / counter;
+          if (total > max)
+            max = total;
+
+          table.append(`<tr><td>${number}</td><td>${name}</td><td>${first}</td><td>${second}</td><td>${final}</td><td style="background-color: ${pass == true ? 'lime' : 'red'};">${total}</td></tr>`)
+
+          avgEl.text(`Avg: ${avg}`);
+          maxEl.text(`Max: ${max}`);
+        });
+      });
+
+    </script>
+  </head>
+
+  <body>
+    <div id="main">
+      <h1 style="text-align: center;">PHP Lab 04</h1>
+      <br> <br>
+      <div id="buttons-div">
+        <label>Student Number: </label>
+        <input
+          type="number"
+          step="1"
+          min="0"
+          max="25"
+          class="border button"
+          placeholder="Enter number"
+          id="s-number"
+          style="width: 150px;"
+        />
+        <label>Student Name: </label>
+        <input
+          type="text"
+          class="border button"
+          placeholder="Enter name"
+          id="s-name"
+          style="width: 150px;"
+        />
+        <label>First: </label>
+        <input
+          type="number"
+          step="1"
+          min="0"
+          max="25"
+          class="border button"
+          placeholder="First Mark"
+          id="s-first"
+          style="width: 150px;"
+        />
+        <label>Second: </label>
+        <input
+          type="number"
+          step="1"
+          min="0"
+          max="25"
+          class="border button"
+          placeholder="Second Mark"
+          id="s-second"
+          style="width: 150px;"
+        />
+        <label>Final: </label>
+        <input
+          type="number"
+          class="border button"
+          placeholder="Final Mark"
+          id="s-final"
+          style="width: 150px;"
+        />
+        <input
+          type="button"
+          class="border button no-margin"
+          value="Add Record"
+          id="submit"
+          style="background-color: black; color: white;"
+        />
+      </div>
+
+
+      <br />
+      <br />
+
+      <table id="students">
+        <tr>
+          <th>Student Number</th>
+          <th>Student Name</th>
+          <th>First</th>
+          <th>Second</th>
+          <th>Final</th>
+          <th>Total</th>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+
+      <div class="center">
+
+        <p id="avg" class="text">Avg: 0</p>
+        <p id="max" class="text">Max: 0</p>
+      </div>
+
+      <br> <br> <br>
+      <div style="text-align: center;">Made with ❤ by <a href="https://opg4mers.com" target="_blank" style="font-weight: bold; color: lime !important; text-decoration: none;">Ayham Al-Ali</a></div>
+    </div>
+  </body>
+</html>

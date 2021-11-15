@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Ayham - PHP</title>
+        <style>
+            body {
+                font-family: Georgia, serif;
+            }
+            * {
+                margin: 3px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form style="margin: auto; width: max-content; padding: 20px; border: 1px solid black;">
+            <label>Name: </label> <input type="text"> <br>
+            
+            <label>Address: </label> <br>
+            <textarea id="textarea">Amman</textarea> <br>
+
+            <label>Gender: </label> <br>
+            <input type="radio" id="g-male" name="gender" value="Male">Male</input>  <br>
+            <input type="radio" id="g-female" name="gender" value="Female">Female</input>  <br>
+
+            <label>Hobbies: </label> <br>
+            <input type="checkbox" id="chess" name="chess" value="Chess">Chess</input> <br>
+            <input type="checkbox" id="football" name="football" value="Football">Football</input> <br>
+            <input type="checkbox" id="swimming" name="swimming" value="Swimming">Swimming</input> <br>
+            <select name="hobbies-custom" id="hobbies-custom">
+                <option value="Web Developer">Web Developer</option>
+                <option value="Web Designer">Web Designer</option>
+                <option value="Web Manager">Web Manager</option>
+            </select> <br><br>
+
+            <input type="submit" value="Sign Up">
+            <input type="reset" value="Clear">
+        </form>
+
+
+    </body>
+</html>

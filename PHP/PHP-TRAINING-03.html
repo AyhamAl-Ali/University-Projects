@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>PHP 03 - Ayham</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $("#plus").click(() => {
+                    let n1 = parseFloat($("#number1").val());
+                    let n2 = parseFloat($("#number2").val());
+                    let result = n1 + n2;
+                    $("#result").val(result);
+                })
+
+                $("#minus").click(() => {
+                    let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                    let n2 = parseFloat($("#number2").val());
+                    let result = n1 - n2;
+                    $("#result").val(result);
+                })
+
+                $("#mul").click(() => {
+                    let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                    let n2 = parseFloat($("#number2").val());
+                    let result = n1 * n2;
+                    $("#result").val(result);
+                })
+
+                $("#div").click(() => {
+                    let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                    let n2 = parseFloat($("#number2").val());
+                    let result = n1 / n2;
+                    $("#result").val(result);
+                })
+            })
+        </script>
+        <style>
+            #calc {
+                margin: 0 auto;
+                width: max-content;
+                border: 1px solid black;
+                padding: 50px;
+                border-radius: 20px;
+                background: rgba(0,0,0,.9);
+                color: white;
+            }
+            input {
+
+                border-radius: 5px;
+                padding: 5px;
+            }
+            .padding {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="calc"> 
+            <label>Number 1: </label> <input id="number1" type="text"></input> <br>
+            <label>Number 2: </label> <input id="number2" type="text"></input> <br> <br>
+
+            <input type="button" id="plus" class="padding" value="+"> <input type="button" class="padding" id="minus" value="-"> <input type="button" class="padding" id="mul" value="*"> <input type="button" class="padding" id="div" value="/"> <br> <br>
+
+            <input type="text" id="result" placeholder="Result Here"></input> <br>
+        </div>
+        
+    </body>
+
+</html>

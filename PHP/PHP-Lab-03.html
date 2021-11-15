@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PHP Lab 03 - Ayham</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#plus").click(() => {
+                let n1 = parseFloat($("#number1").val());
+                let n2 = parseFloat($("#number2").val());
+                let result = n1 + n2;
+                $("#result").val(result);
+            })
+
+            $("#minus").click(() => {
+                let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                let n2 = parseFloat($("#number2").val());
+                let result = n1 - n2;
+                $("#result").val(result);
+            })
+
+            $("#mul").click(() => {
+                let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                let n2 = parseFloat($("#number2").val());
+                let result = n1 * n2;
+                $("#result").val(result);
+            })
+
+            $("#div").click(() => {
+                let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                let n2 = parseFloat($("#number2").val());
+                let result = n1 / n2;
+                $("#result").val(result);
+            })
+
+            $("#min").click(() => {
+                let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                let n2 = parseFloat($("#number2").val());
+                let result = Math.min(n1, n2);
+                $("#result").val(result);
+            })
+
+            $("#max").click(() => {
+                let n1 = parseFloat($("#number1").val()); // parse not needed but why not!
+                let n2 = parseFloat($("#number2").val());
+                let result = Math.max(n1, n2);
+                $("#result").val(result);
+            })
+
+            $("#word-changer-btn").click(() => {
+                let wordToChange = $("#word-to-change").text();
+                let newWord = $("#word-changer-text").val();
+                $("#word-to-change").text(newWord);
+            })
+
+
+            $("#word-changer-live-btn").keydown(() => {
+                let wordToChange = $("#word-to-change").text();
+                let newWord = $("#word-changer-live-btn").val();
+                $("#word-to-change").text(newWord);
+            })
+
+
+        })
+    </script>
+    <style>
+        body {
+            background: rgba(0, 0, 0, .9);
+        }
+
+        #calc,
+        #figure2 {
+            margin: 20px auto;
+            width: max-content;
+            border: 1px solid rgba(193, 45, 38, 0.9);
+            background: rgba(255, 96, 89, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            color: black;
+        }
+
+        #figure2 {
+            border: 1px solid rgba(38, 193, 77, 0.9);
+            background: rgba(125, 255, 89, 0.9);
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            border-radius: 5px;
+            margin: 3px 0;
+            padding: 5px;
+        }
+
+        .padding {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="calc">
+        <label>Number 1: </label> <input id="number1" type="text"></input> <br>
+        <label>Number 2: </label> <input id="number2" type="text"></input> <br> <br>
+
+        <input type="button" id="plus" class="padding" value="+">
+        <input type="button" class="padding" id="minus" value="-">
+        <input type="button" class="padding" id="mul" value="*">
+        <input type="button" class="padding" id="div" value="/">
+        <input type="button" class="padding" id="min" value="Min">
+        <input type="button" class="padding" id="max" value="Max">
+
+        <br> <br>
+
+        <input type="text" id="result" placeholder="Result Here"></input> <br>
+    </div>
+
+    <div id="figure2">
+        <p>The word in bold will be changed to <strong id="word-to-change">RED</strong></p>
+        <label>Type the new word: </label> <input id="word-changer-text" type="text"></input>
+        <input type="button" id="word-changer-btn" value="Change!"></input>
+        <br>
+        <p><strong>Live Changer (Type anything)</strong></p>
+        <label>Type the new word: </label> <input id="word-changer-live-btn" type="text"></input>
+
+    </div>
+</body>
+
+</html>
