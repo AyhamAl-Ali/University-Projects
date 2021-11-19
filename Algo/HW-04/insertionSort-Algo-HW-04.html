@@ -1,0 +1,140 @@
+<!-- 
+    
+    Insertion Sort Algorithm
+    Name: Ayham Al-Ali
+    UID: 201910486
+    Date: 11/19/2021 (MM/DD/YY)
+    
+-->
+
+
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>Algo HW 04 - AYHAM</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script>
+            $(document).ready(() => {
+                $('#submit').click(() => {
+                    let list = $('#user-defined-list').val().split(", ");
+                    for (let i = 0; i < list.length; i++) { // force parse int
+                        list[i] = parseInt(list[i]);
+                    }
+                    let isDescending = $("#is-descending").prop('checked');
+                    insertionSort(list, isDescending);
+                    printList(list, isDescending);
+                });
+            });
+        </script>
+
+        <style>
+            body {
+                font-family: 'Poppins';
+            }
+
+            #main {
+                padding: 50px;
+                width: max-content;
+                box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+                margin: 5% auto;
+                text-align: center;
+            }
+
+            .btn {
+                padding: 10px;
+                margin: 5px;
+                border: unset;
+            }
+            
+            input {
+                padding: 10px;
+                font-size: 20px;;
+                margin: 5px;
+                outline: unset;
+                border: 1px solid rgba(0, 0, 0, .2);
+            }
+            
+            input[type="checkbox"] {
+                height: 20px;
+                width: 20px;
+                position: relative;
+                top: 5px;
+                background-color: #eee;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+
+            <h1>Insertion Sort</h1>
+            <input id="user-defined-list" type="text" value="10, 5, 15, 52, 2">
+            <br>
+            <label>Descending: </label><input id="is-descending" type="checkbox">
+            <br>
+            <br>
+            <input id="submit" class="btn" type="button" value="Sort it!">
+        
+            <div id="results">
+                <h1>Result</h1>
+            </div>
+        
+            <div style="margin-top: 50px;">
+                <p style="color: lime">Made with <span style="color: red">❤</span> by <a style="font-weight: bold; text-decoration: none; color: orange;" href="https://opg4mers.com" target="_blank">Ayham Al-Ali</a></p>
+            </div>
+        </div>
+
+        <script>
+
+            function insertionSort(list, isDescending) {
+                let size = list.length;
+                if (!isDescending) { // Checking from left to right
+                    for (let i = 0; i < size; i++) {
+                        let oldValue = list[i];
+                        let nextValue = i - 1;
+                        while (nextValue >= 0 && list[nextValue] > oldValue) {
+                            list[nextValue + 1] = list[nextValue];
+                            nextValue--;
+                        }
+                        list[nextValue + 1] = oldValue;
+                    }
+
+                } else { // Checking from right to left
+                    for (let i = size - 1; i >= 0; i--) {
+                        let oldValue = list[i];
+                        let nextValue = i + 1;
+                        while (nextValue < size && list[nextValue] > oldValue) {
+                            list[nextValue - 1] = list[nextValue];
+                            nextValue++;
+                        }
+                        list[nextValue - 1] = oldValue;
+                    }
+                }
+            }
+
+            function printList(list, isDescending) {
+                let sb = "";
+                list.forEach(e => {
+                    sb += e + " ";
+                });
+                printResult(`${isDescending ? 'Descending' : 'Ascending'}`  + " order: <strong>" + sb + "</strong>");
+            }
+
+            var resultsDiv = document.querySelector("#results");
+            function printResult(string) {
+                resultsDiv.insertAdjacentHTML('beforeend', `<span class='result'>${string}</span><br>`)
+            }
+        </script>
+
+    </body>
+
+
+</html>
