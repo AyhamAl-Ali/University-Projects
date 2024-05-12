@@ -12,13 +12,18 @@ public class shipMove : MonoBehaviour
     [SerializeField] float mainThrust = 5;
     [SerializeField] float mainRotate = 100;
 
+    private Quaternion originalRotation;
+
     // Start is called before the first frame update
     void Start()
     {
 
         rb = GetComponent<Rigidbody>();
         ad = GetComponent<AudioSource>();
-        
+
+        originalRotation = transform.rotation;
+
+
     }
 
     // Update is called once per frame
@@ -54,11 +59,23 @@ public class shipMove : MonoBehaviour
 
     }
 
+    void FixedUpdate()
+    {
+        // Apply damping to gradually return to original rotation
+        Quaternion currentRotation = rb.rotation;
+        Quaternion targetRotation = originalRotation;
+        rb.MoveRotation(Quaternion.Lerp(currentRotation, targetRotation, Time.fixedDeltaTime * 5f));
+    }
+
     void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.transform.Rotate(Vector3.right * Time.deltaTime * mainRotate, 0.1f, 0);
+            //Quaternion currentRotation = rb.rotation;
+            //Quaternion targetRotation = originalRotation;
+            //rb.transform.Rotate(Vector3.right * Time.deltaTime * mainRotate, 0.1f, 0);
+            //rb.MoveRotation(Quaternion.Lerp(currentRotation, targetRotation, Time.fixedDeltaTime * 5f));
+            rb.AddTorque(Random.insideUnitSphere * 100f);
             //rb.AddRelativeForce(Vector3.right * mainRotate, ForceMode.Acceleration);
 
         }
@@ -105,7 +122,7 @@ public class shipMove : MonoBehaviour
         Debug.Log("Loaded Next Scene");
         int sceneCount = SceneManager.sceneCountInBuildSettings;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene((currentSceneIndex+1) > sceneCount ? 0 : (currentSceneIndex+1));
+        SceneManager.LoadScene((currentSceneIndex+1) == sceneCount ? 0 : (currentSceneIndex+1));
     }
 
 }
